@@ -28,25 +28,25 @@ html, body {
   transform-origin: 50% 50%;
 }
 
-/* ✅ 2단 이미지의 회전 중심 수정 (1291.5, 1296 기준) */
+/* ✅ 2단 이미지의 회전 중심 좌표 (1291.5, 1296 기준) */
 #layer2 {
   transform-origin: calc(1291.5 / 2358 * 100%) calc(1296 / 3946 * 100%);
 }
 
-/* ✅ 왕복 회전 애니메이션: 시계방향 1회 → 반시계방향 1회 */
-@keyframes spinBackAndForth {
+/* ✅ 반바퀴 왕복 회전 애니메이션 */
+@keyframes spinHalfBack {
   0%   { transform: rotate(0deg); }
-  50%  { transform: rotate(360deg); }
+  50%  { transform: rotate(180deg); }
   100% { transform: rotate(0deg); }
 }
 
 .rotate {
-  animation: spinBackAndForth 1.2s ease-in-out;
+  animation: spinHalfBack 1.2s ease-in-out;
 }
 
-/* 클릭 가능한 핫스팟 */
+/* 클릭 가능한 투명 영역 */
 .hotspot {
   position: absolute;
   z-index: 20;
-  background: rgba(255, 255, 255, 0); /* 디버깅 시 0.3 등으로 조정 가능 */
+  background: rgba(255, 255, 255, 0); /* 디버깅 시 투명도 조정 가능 */
 }
