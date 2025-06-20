@@ -41,7 +41,7 @@ html, body {
 }
 
 .rotate {
-  animation: spinHalfBack 1.2s ease-in-out;
+  animation: spinHalfBack 1.6s ease-in-out;
 }
 
 /* 클릭 가능한 투명 영역 */
